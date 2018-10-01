@@ -45,6 +45,7 @@ JPasswordField P1;
   frame.add(L3);
   frame.add(P1);
   frame.add(B1);
+  frame.add(B2); 
  //make sure the program exits when the frame closes.
   frame.setSize(400, 400);
   frame.setLayout(null);
