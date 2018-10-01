@@ -17,7 +17,7 @@ JTextField TF1;
 JButton B1, B2;
 JPasswordField P1;
    
- LoginForm() {
+ Public LoginForm() {
   JFrame frame = new JFrame("Login Form");
 //note:labels provides instructions or information.
   L1 = new JLabel("Login Form");
