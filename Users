@@ -1,0 +1,83 @@
+package users;
+//Imports are listed in full to show what's being used
+//could just import javax.swing.* and java.awt.* etc..
+import java.awt.Color;
+import java.awt.Font;
+import static java.awt.PageAttributes.MediaType.B1;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import static javax.print.attribute.standard.MediaSize.JIS.B1;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JTextField;
+public class Users {
+//Note: Typically the main method will be in a
+//separate class. As this is a simple one class
+//example it's all in the one class.
+JLabel L1, L2, L3, L4,L5;
+JTextField TF1,TF2,TF3,TF4;
+JButton B1, B2;  
+    
+    public Users () {
+
+ JFrame frame = new JFrame("Add a new user");
+//note:labels provides instructions or information.
+  L1 = new JLabel("ADD A NEW USER");
+  L1.setForeground(Color.black);
+  L1.setFont(new Font("Arial", Font.BOLD, 30));
+  L2 = new JLabel("First Name");
+  L3 = new JLabel("Last Name");
+  L4= new JLabel("Telephone");
+  L5= new JLabel("Date of Birth"); 
+//To allow editing of a single line of text and password entry.
+  TF1 = new JTextField();
+  TF2 = new JTextField();
+  TF3= new JTextField();
+//implementation of a push button.
+  B1 = new JButton("Clear");
+  B2 = new JButton("Save User");
+//editing the size of the components
+  L1.setBounds(100, 30, 400, 30);
+  L2.setBounds(80, 70, 200, 30);
+  L3.setBounds(80, 110, 200, 30);
+  L4.setBounds(80, 70, 200, 30);
+  L5.setBounds(80, 70, 200, 30);
+  TF1.setBounds(300, 70, 200, 30);
+  TF2.setBounds(300, 70, 200, 30);
+  TF3.setBounds(300, 70, 200, 30);
+  TF4.setBounds(300, 70, 200, 30);
+  B1.setBounds(300, 110, 200, 30);
+  B2.setBounds(150, 160, 100, 30);
+ //note: main window where components are displayed like labels, buttons etc..
+  frame.add(L1);
+  frame.add(L2);
+  frame.add(L3);
+  frame.add(L4);
+  frame.add(L5);
+  frame.add(TF1);
+  frame.add(TF2);
+  frame.add(TF3);
+  frame.add(TF4);
+  frame.add(B1);
+  frame.add(B2);
+ //make sure the program exits when the frame closes.
+  frame.setSize(600, 400);
+  frame.setLayout(null);
+  frame.setVisible(true);
+  frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);        
+        
+//To implement the interface that contains an actionPerformed()method.
+B1.addActionListener(new ActionListener() {
+      @Override
+      public void actionPerformed(ActionEvent e) {
+          TF1.setText("");
+          TF2.setText("");
+          TF3.setText("");
+          TF4.setText("");
+      }
+ public static void main(String[] args) {
+        // TODO code application logic here
+    }
+    
+}
