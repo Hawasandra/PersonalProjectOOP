@@ -1,0 +1,77 @@
+package login;
+//Imports are listed in full to show what's being used
+//could just import javax.swing.* and java.awt.* etc..
+import java.awt.Color;
+import java.awt.Font;
+import javafx.event.ActionEvent;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPasswordField;
+import javax.swing.JTextField;
+
+public class LoginForm{
+JLabel L1, L2, L3;
+JTextField TF1;
+JButton B1, B2;
+JPasswordField P1;
+   
+ LoginForm() {
+  JFrame frame = new JFrame("Login Form");
+//note:labels provides instructions or information.
+  L1 = new JLabel("Login Form");
+  L1.setForeground(Color.black);
+  L1.setFont(new Font("Arial", Font.BOLD, 30));
+  L2 = new JLabel("Username");
+  L3 = new JLabel("Password");
+//To allow editing of a single line of text and password entry.
+  TF1 = new JTextField();
+  P1 = new JPasswordField();
+//implementation of a push button.
+  B1 = new JButton("Clear");
+  B2 = new JButton("Login");
+//editing the size of the components
+  L1.setBounds(100, 30, 400, 30);
+  L2.setBounds(80, 70, 200, 30);
+  L3.setBounds(80, 110, 200, 30);
+  TF1.setBounds(300, 70, 200, 30);
+  P1.setBounds(300, 110, 200, 30);
+  B1.setBounds(150, 160, 100, 30);
+ //note: main window where components are displayed like labels, buttons etc..
+  frame.add(L1);
+  frame.add(L2);
+  frame.add(TF1);
+  frame.add(L3);
+  frame.add(P1);
+  frame.add(B1);
+ //make sure the program exits when the frame closes.
+  frame.setSize(400, 400);
+  frame.setLayout(null);
+  frame.setVisible(true);
+  frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+}
+ 
+ public void actionPerformed(ActionEvent ae)
+ {
+   String uname = TF1.getText();
+   String pass = P1.getText();
+   if(uname.equals("HawaS@ndra") && pass.equals("abc@123"))
+   {
+      Welcome wel = new Welcome();
+      wel.setVisible(true);
+      JLabel label = new JLabel("Welcome:"+uname);
+    }
+    else
+    {
+   JOptionPane.showMessageDialog(this,"Incorrect login or password",
+      "Error",JOptionPane.ERROR_MESSAGE); 
+    }
+  }
+ 
+ public static void main(String[] args) {
+  new LoginForm();
+ }
+}
+
+
