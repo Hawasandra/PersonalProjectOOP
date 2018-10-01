@@ -1,0 +1,60 @@
+package Dashboard;
+
+import java.awt.PopupMenu;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.ImageIcon;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.SwingUtilities;
+
+public class DashB{
+    JButton B1, B2;
+    
+    public DashB() {
+   JFrame DashFrame=new JFrame("Home");
+  //implementation of a push button.
+  B1 = new JButton("Clear");
+  B2 = new JButton("Login");        
+  //editing the size of the components
+  B1.setBounds(300, 110, 200, 30);
+  B2.setBounds(150, 160, 100, 30);     
+  //note: main window where components are displayed like labels, buttons etc..
+  frame.add(B1);
+  frame.add(B2);     
+  //make sure the program exits when the frame closes.
+  frame.setSize(400, 400);
+  frame.setLayout(null);
+  frame.setVisible(true);
+  frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+}
+    B1.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+                Frame.dispose();
+                new  addUser();
+                
+            }
+        });
+        
+       B2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ae)
+                {
+                    System.exit(0);
+                }
+            });
+        
+        }  
+
+
+    void setVisible(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+
+    private PopupMenu newJLabel(ImageIcon imageIcon) {
+        throw new UnsupportedOperationException("Not supported yet."); 
+    }
+
+    private void add(JButton b3) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    }
