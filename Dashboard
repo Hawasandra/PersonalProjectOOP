@@ -1,5 +1,6 @@
 package Dashboard;
-
+//Imports are listed in full to show what's being used
+//could just import javax.swing.* and java.awt.* etc..
 import java.awt.PopupMenu;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -10,8 +11,7 @@ import javax.swing.SwingUtilities;
 
 public class DashB{
     JButton B1, B2;
-    
-    public DashB() {
+  public DashB() {
    JFrame DashFrame=new JFrame("Home");
   //implementation of a push button.
   B1 = new JButton("Clear");
