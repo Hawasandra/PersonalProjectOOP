@@ -51,7 +51,7 @@ JPasswordField P1;
   frame.setVisible(true);
   frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 }
- 
+//To create an instance of an anonymous class so that the listener code is closer in proximity to the controls that use it. 
  public void actionPerformed(ActionEvent ae)
  {
    String uname = TF1.getText();
