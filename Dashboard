@@ -1,4 +1,4 @@
-package Dashboard;
+package personal.project ;
 //Imports are listed in full to show what's being used
 //could just import javax.swing.* and java.awt.* etc..
 import java.awt.PopupMenu;
@@ -32,16 +32,13 @@ public class DashB{
             public void actionPerformed(ActionEvent ae){
                 Frame.dispose();
                 new  addUser();
-                
-            }
-        });
+                };
         
        B2.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ae)
                 {
                     System.exit(0);
-                }
-            });
+                };
         
         }  
 
